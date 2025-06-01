@@ -3,33 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>طلب انتساب - حزب تكافل وطني</title>
+  <title>انضم إلينا - تكافل وطني</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="overlay">
     <img src="logo.jpg" alt="لوغو الحزب" class="logo">
     <h1>طلب انتساب لحزب تكافل وطني</h1>
-    <p>يرجى تعبئة جميع الحقول بدقة</p>
+    <p>املأ المعلومات التالية بدقة</p>
 
-    <form class="join-form">
-      <input type="text" placeholder="الاسم الكامل" required />
-      <input type="text" placeholder="اسم الأب" required />
-      <input type="text" placeholder="اسم الأم" required />
-      <input type="text" placeholder="رقم الهاتف" required />
-      <input type="text" placeholder="محل وتاريخ الولادة (مثال: دمشق 1990/01/01)" required />
-      <input type="text" placeholder="المحافظة" required />
-      <input type="text" placeholder="الرقم الوطني" required />
+    <form class="join-form" method="POST" action="submit.php">
+      <input type="text" name="name" placeholder="الاسم الكامل" required />
+      <input type="text" name="father" placeholder="اسم الأب" required />
+      <input type="text" name="mother" placeholder="اسم الأم" required />
+      <input type="text" name="phone" placeholder="رقم الهاتف" required />
+      <input type="text" name="birthplace" placeholder="مكان الولادة" required />
+      <input type="date" name="birthdate" placeholder="تاريخ الولادة" required />
+      <input type="text" name="governorate" placeholder="المحافظة" required />
+      <input type="text" name="national_id" placeholder="الرقم الوطني" required />
+      <textarea name="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea>
 
-      <div class="declaration">
-        <p>
-          أقرّ بأن جميع المعلومات الواردة أعلاه صحيحة، وأتعهد بالالتزام بمبادئ حزب التكافل الوطني السوري والعمل بما يخدم مصلحة الوطن.
-        </p>
-        <label>
-          <input type="checkbox" required />
-          أوافق على التعهد أعلاه
-        </label>
-      </div>
+      <label>
+        <input type="checkbox" name="agree" required />
+        أتعهد بصحة المعلومات وأرغب بالانضمام إلى حزب تكافل وطني.
+      </label>
 
       <button type="submit">إرسال الطلب</button>
     </form>
