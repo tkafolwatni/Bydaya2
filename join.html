@@ -3,20 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>انضم إلينا - تكافل وطني</title>
+  <title>طلب انتساب - حزب تكافل وطني</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="overlay">
     <img src="logo.jpg" alt="لوغو الحزب" class="logo">
     <h1>طلب انتساب لحزب تكافل وطني</h1>
-    <p>املأ المعلومات التالية وسنتواصل معك قريبًا</p>
+    <p>يرجى تعبئة جميع الحقول بدقة</p>
 
-    <form class="join-form" action="mailto:tkafolwatni@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="الاسم" placeholder="الاسم الكامل" required />
-      <input type="text" name="الهاتف" placeholder="رقم الهاتف" required />
-      <input type="email" name="البريد" placeholder="البريد الإلكتروني" />
-      <textarea name="ملاحظات" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+    <form class="join-form">
+      <input type="text" placeholder="الاسم الكامل" required />
+      <input type="text" placeholder="اسم الأب" required />
+      <input type="text" placeholder="اسم الأم" required />
+      <input type="text" placeholder="رقم الهاتف" required />
+      <input type="text" placeholder="محل وتاريخ الولادة (مثال: دمشق 1990/01/01)" required />
+      <input type="text" placeholder="المحافظة" required />
+      <input type="text" placeholder="الرقم الوطني" required />
+
+      <div class="declaration">
+        <p>
+          أقرّ بأن جميع المعلومات الواردة أعلاه صحيحة، وأتعهد بالالتزام بمبادئ حزب التكافل الوطني السوري والعمل بما يخدم مصلحة الوطن.
+        </p>
+        <label>
+          <input type="checkbox" required />
+          أوافق على التعهد أعلاه
+        </label>
+      </div>
+
       <button type="submit">إرسال الطلب</button>
     </form>
 
